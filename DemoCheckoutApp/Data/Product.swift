@@ -76,4 +76,11 @@ class Order {
             return addedProduct.product.id == product.id
         })
     }
+
+    func addedCount(_ product: Product) -> Int? {
+        if let index = index(of: product) {
+            return checkoutItems[index].count
+        }
+        return nil
+    }
 }

@@ -18,13 +18,13 @@ class ProductCell: UITableViewCell {
 
     var delegate: CartProtocol?
 
-    var added: Bool = false {
+    var addedCount: Int? {
         didSet {
-            let title = added ? "More" : "Add"
-            let color = added ? UIColor.mainYellow : UIColor.mainGreen
-
-            addButton.setTitle(title, for: .normal)
-            addButton.backgroundColor = color
+            if let amount = addedCount {
+                addButton.setTitle("Added \(amount)", for: .normal)
+            } else {
+                addButton.setTitle("Add", for: .normal)
+            }
         }
     }
 
@@ -39,10 +39,6 @@ class ProductCell: UITableViewCell {
 
     @IBAction func add(_ sender: UIButton) {
         delegate?.addToCart(self)
-
-        UIView.animate(withDuration: 0.5) {
-            self.added =  true
-        }
     }
 }
 

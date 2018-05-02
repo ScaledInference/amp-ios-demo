@@ -22,6 +22,8 @@ class StoreViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        tableView.reloadData()
         updateOrderInformation()
     }
 
@@ -45,7 +47,7 @@ extension StoreViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartCellId") as! ProductCell
         let product = dataProvider.categories[indexPath.section].products[indexPath.row]
         cell.product = product
-        cell.added = order.contains(product)
+        cell.addedCount = order.addedCount(product)
         cell.delegate = self
 
         return cell
@@ -65,7 +67,11 @@ extension StoreViewController: CartProtocol {
         if let indexPath = tableView.indexPath(for: сell) {
             let product = dataProvider.categories[indexPath.section].products[indexPath.row]
             order.add(product)
+
             updateOrderInformation()
+            UIView.animate(withDuration: 0.5) {
+                сell.addedCount = self.order.addedCount(product)
+            }
         }
     }
 }
