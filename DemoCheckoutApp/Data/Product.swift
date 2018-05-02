@@ -37,7 +37,7 @@ struct CheckoutItem {
 
 class Order {
     var checkoutItems = [CheckoutItem]()
-    var discount: Int = 0
+    var discount: Int = 5
 
     var totalCount: Int {
         var totalCount = 0
@@ -57,6 +57,10 @@ class Order {
 
     var totalCost: Float {
         return subTotalCost * Float(100 - discount) / 100
+    }
+
+    var discountAmount: Float {
+        return subTotalCost * Float(discount) / 100
     }
 
     func contains(_ product: Product) -> Bool {

@@ -13,10 +13,12 @@ class StoreViewController: UIViewController {
     @IBOutlet weak var couterButton: UIButton!
 
     let dataProvider: DataProvider = DataProvider.shared
-    var order: Order = Order()
+    let session: Session = Session()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        UIView.appearance().tintColor = session.ctaColor
         tableView.dataSource = self
     }
 
@@ -29,7 +31,7 @@ class StoreViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let viewController = segue.destination as? PreviewViewController {
-            viewController.order = order
+            viewController.session = session
         }
     }
 }
@@ -47,7 +49,8 @@ extension StoreViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartCellId") as! ProductCell
         let product = dataProvider.categories[indexPath.section].products[indexPath.row]
         cell.product = product
-        cell.addedCount = order.addedCount(product)
+        cell.addedCount = session.order.addedCount(product)
+        cell.addButton.backgroundColor = session.ctaColor
         cell.delegate = self
 
         return cell
@@ -58,7 +61,7 @@ extension StoreViewController: UITableViewDataSource {
     }
 
     func updateOrderInformation() {
-        self.couterButton.titleLabel?.text = "\(self.order.totalCount)"
+        couterButton.titleLabel?.text = "\(session.order.totalCount)"
     }
 }
 
@@ -66,11 +69,11 @@ extension StoreViewController: CartProtocol {
     func addToCart(_ сell: ProductCell) {
         if let indexPath = tableView.indexPath(for: сell) {
             let product = dataProvider.categories[indexPath.section].products[indexPath.row]
-            order.add(product)
+            session.order.add(product)
 
             updateOrderInformation()
             UIView.animate(withDuration: 0.5) {
-                сell.addedCount = self.order.addedCount(product)
+                сell.addedCount = self.session.order.addedCount(product)
             }
         }
     }

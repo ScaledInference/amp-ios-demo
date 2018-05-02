@@ -9,6 +9,11 @@
 import UIKit
 
 class ThanksViewController: UIViewController {
+    @IBOutlet weak var newOrderButton: UIButton!
+
+    override func viewDidLoad() {
+        newOrderButton.backgroundColor = UIView.appearance().tintColor
+    }
 
     @IBAction func makeNewOrder() {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)

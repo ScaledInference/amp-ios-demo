@@ -164,13 +164,13 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="140"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="M3u-PU-rlI">
-                                        <rect key="frame" x="20" y="20" width="335" height="111.5"/>
+                                        <rect key="frame" x="20" y="20" width="335" height="116"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oyy-F8-qy0">
-                                                <rect key="frame" x="12.5" y="0.0" width="310" height="69.5"/>
+                                                <rect key="frame" x="12.5" y="0.0" width="310" height="45"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="AXu-GI-A0B">
-                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="69.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="45"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oaj-vm-nPO">
                                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="20.5"/>
@@ -178,14 +178,8 @@
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwI-qc-cyX">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of items:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4u-cs-ToS">
                                                                 <rect key="frame" x="0.0" y="24.5" width="150" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4u-cs-ToS">
-                                                                <rect key="frame" x="0.0" y="49" width="150" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -197,7 +191,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ecy-J0-0bG">
-                                                        <rect key="frame" x="160" y="0.0" width="150" height="69.5"/>
+                                                        <rect key="frame" x="160" y="0.0" width="150" height="45"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12234,01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpf-RY-qGz">
                                                                 <rect key="frame" x="80.5" y="0.0" width="69.5" height="20.5"/>
@@ -211,19 +205,19 @@
                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2351,20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UiA-AA-ULS">
-                                                                <rect key="frame" x="88" y="49" width="62" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order in 30 minues to get free shipping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhF-PD-yog">
+                                                <rect key="frame" x="12.5" y="57" width="310" height="17"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                <color key="textColor" red="0.67209311548223349" green="0.1005389541352964" blue="0.0058067390242124029" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXu-lu-PR3">
-                                                <rect key="frame" x="12.5" y="81.5" width="310" height="30"/>
+                                                <rect key="frame" x="12.5" y="86" width="310" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Checkout ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -235,7 +229,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="sXu-lu-PR3" firstAttribute="trailing" secondItem="UiA-AA-ULS" secondAttribute="trailing" id="Vt1-3C-jyO"/>
+                                            <constraint firstItem="BhF-PD-yog" firstAttribute="leading" secondItem="d4u-cs-ToS" secondAttribute="leading" id="DUh-Ha-AtV"/>
                                             <constraint firstItem="sXu-lu-PR3" firstAttribute="leading" secondItem="d4u-cs-ToS" secondAttribute="leading" id="y09-0b-8A0"/>
                                         </constraints>
                                     </stackView>
@@ -358,10 +352,11 @@
                         <viewLayoutGuide key="safeArea" id="jjo-n1-ton"/>
                     </view>
                     <connections>
-                        <outlet property="discountLabel" destination="SQ0-VP-28a" id="O6h-qA-D7P"/>
+                        <outlet property="checkoutButton" destination="sXu-lu-PR3" id="E4I-Yy-KnL"/>
+                        <outlet property="countLabel" destination="SQ0-VP-28a" id="Ny6-DU-HZa"/>
+                        <outlet property="freeShippingLabel" destination="BhF-PD-yog" id="2bz-5f-mCJ"/>
                         <outlet property="subtotalLabel" destination="Kpf-RY-qGz" id="5WZ-qz-r71"/>
                         <outlet property="tableView" destination="mhF-yA-SPX" id="ibu-dk-sIP"/>
-                        <outlet property="totalLabel" destination="UiA-AA-ULS" id="5zw-Ra-8kn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiP-6Q-EIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -608,6 +603,7 @@
                     <connections>
                         <outlet property="deliveryDateLabel" destination="HZh-iW-yzr" id="RVJ-fG-ZwT"/>
                         <outlet property="discountLabel" destination="sDc-Fe-nIZ" id="E8W-N1-5OV"/>
+                        <outlet property="placeOrderButton" destination="brB-dH-aL5" id="LK0-Zo-OSk"/>
                         <outlet property="subtotalLabel" destination="7sI-ij-8nu" id="7vN-eh-lDa"/>
                         <outlet property="tableView" destination="UtC-f9-hkS" id="76R-hP-OBh"/>
                         <outlet property="totalLabel" destination="OYb-RX-YFa" id="WQd-m8-IQI"/>
@@ -654,6 +650,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pBh-9g-LS2"/>
                     </view>
+                    <connections>
+                        <outlet property="newOrderButton" destination="ieA-wJ-qYn" id="lsJ-fE-jir"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fs-LP-Q4k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

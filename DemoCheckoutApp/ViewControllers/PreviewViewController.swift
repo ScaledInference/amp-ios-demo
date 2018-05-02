@@ -11,42 +11,45 @@ import UIKit
 class PreviewViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var subtotalLabel: UILabel!
-    @IBOutlet weak var discountLabel: UILabel!
-    @IBOutlet weak var totalLabel: UILabel!
-
-    var order: Order!
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var freeShippingLabel: UILabel!
+    @IBOutlet weak var checkoutButton: UIButton!
+    
+    var session: Session!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         tableView.dataSource = self
+        checkoutButton.backgroundColor = UIView.appearance().tintColor
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        freeShippingLabel.text = "Order in \(session.minutesLeftForFreeShipping) minues to get a free shipping."
         updateOrderInformation()
     }
 
     func updateOrderInformation() {
-        subtotalLabel.text = "\(order.subTotalCost)"
-        discountLabel.text = "\(order.discount)"
-        totalLabel.text = "\(order.totalCost)"
+        subtotalLabel.text = "\(session.order.subTotalCost)"
+        countLabel.text = "\(session.order.totalCount)"
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let viewController = segue.destination as? CheckoutViewController {
-            viewController.order = order
+            viewController.session = session
         }
     }
 }
 
 extension PreviewViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return order.checkoutItems.count
+        return session.order.checkoutItems.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckoutCellId") as! CheckoutCell
-        cell.checkoutItem = order.checkoutItems[indexPath.row]
+        cell.checkoutItem = session.order.checkoutItems[indexPath.row]
         cell.delegate = self
         return cell
     }
@@ -57,10 +60,10 @@ extension PreviewViewController: CounterProtocol {
         if let indexPath = tableView.indexPath(for: cell) {
             let index = indexPath.row
             if count == 0 {
-                order.checkoutItems.remove(at: index)
+                session.order.checkoutItems.remove(at: index)
                 tableView.deleteRows(at: [indexPath], with: .automatic)
             } else {
-                order.checkoutItems[index].count = count
+                session.order.checkoutItems[index].count = count
             }
         }
         updateOrderInformation()

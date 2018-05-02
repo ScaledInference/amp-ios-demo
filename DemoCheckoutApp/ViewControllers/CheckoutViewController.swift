@@ -21,12 +21,15 @@ class CheckoutViewController: UIViewController {
     @IBOutlet weak var discountLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var deliveryDateLabel: UILabel!
-
-    var order: Order!
+    @IBOutlet weak var placeOrderButton: UIButton!
+    
+    var session: Session!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         tableView.dataSource = self
+        placeOrderButton.backgroundColor = UIView.appearance().tintColor
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -35,21 +38,21 @@ class CheckoutViewController: UIViewController {
     }
 
     func updateOrderInformation() {
-        subtotalLabel.text = "\(order.subTotalCost)"
-        discountLabel.text = "\(order.discount)"
-        totalLabel.text = "\(order.totalCost)"
+        subtotalLabel.text = "\(session.order.subTotalCost)"
+        discountLabel.text = "\(session.order.discountAmount)"
+        totalLabel.text = "\(session.order.totalCost)"
         deliveryDateLabel.text = CheckoutViewController.dateFormatter.string(from: Date())
     }
 }
 
 extension CheckoutViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return order.checkoutItems.count
+        return session.order.checkoutItems.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckoutCellId") as! CheckoutCell
-        cell.checkoutItem = order.checkoutItems[indexPath.row]
+        cell.checkoutItem = session.order.checkoutItems[indexPath.row]
         return cell
     }
 }
