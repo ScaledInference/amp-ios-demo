@@ -16,7 +16,7 @@ class ProductCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
 
-    var delegate: CartProtocol?
+    weak var delegate: CartProtocol?
 
     var addedCount: Int? {
         didSet {
@@ -31,7 +31,7 @@ class ProductCell: UITableViewCell {
     var product: Product! {
         didSet {
             titleLabel.text = product.name
-            detailsLabel.text = product.description
+            detailsLabel.text = product.details
             priceLabel.text = "\(product.price)"
             pictureImageView.image = UIImage(named: product.id + ".jpg")
         }
@@ -42,6 +42,6 @@ class ProductCell: UITableViewCell {
     }
 }
 
-protocol CartProtocol {
+protocol CartProtocol: class {
     func addToCart(_ сell: ProductCell)
 }

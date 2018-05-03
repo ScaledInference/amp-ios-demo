@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		730DCC76209A7C2400030326 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730DCC75209A7C2400030326 /* Session.swift */; };
+		730DCC78209A995900030326 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730DCC77209A995900030326 /* Order.swift */; };
 		738661AF20998C5200D00AC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738661AE20998C5200D00AC2 /* AppDelegate.swift */; };
 		738661F920998CFF00D00AC2 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738661C120998CFF00D00AC2 /* CheckoutViewController.swift */; };
 		738661FA20998CFF00D00AC2 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738661C220998CFF00D00AC2 /* PreviewViewController.swift */; };
@@ -60,6 +61,7 @@
 		1FD00EED4CEF51C43DE22355 /* Pods-DemoCheckoutApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoCheckoutApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoCheckoutApp/Pods-DemoCheckoutApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6ACAF51266BBCCECCCEF0CE2 /* Pods_DemoCheckoutApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoCheckoutApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		730DCC75209A7C2400030326 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		730DCC77209A995900030326 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		738661AB20998C5200D00AC2 /* DemoCheckoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoCheckoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		738661AE20998C5200D00AC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		738661BA20998C5400D00AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -226,8 +228,9 @@
 		738661EF20998CFF00D00AC2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				738661F020998CFF00D00AC2 /* DataProvider.swift */,
 				738661F220998CFF00D00AC2 /* Product.swift */,
+				730DCC77209A995900030326 /* Order.swift */,
+				738661F020998CFF00D00AC2 /* DataProvider.swift */,
 				730DCC75209A7C2400030326 /* Session.swift */,
 			);
 			path = Data;
@@ -422,6 +425,7 @@
 				738661FB20998CFF00D00AC2 /* ThanksViewController.swift in Sources */,
 				738661AF20998C5200D00AC2 /* AppDelegate.swift in Sources */,
 				738661FA20998CFF00D00AC2 /* PreviewViewController.swift in Sources */,
+				730DCC78209A995900030326 /* Order.swift in Sources */,
 				7386622520998CFF00D00AC2 /* Product.swift in Sources */,
 				7386622820998CFF00D00AC2 /* ProductCell.swift in Sources */,
 				7386622720998CFF00D00AC2 /* CheckoutCell.swift in Sources */,

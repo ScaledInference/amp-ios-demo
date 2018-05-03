@@ -14,7 +14,7 @@ class PreviewViewController: UIViewController {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var freeShippingLabel: UILabel!
     @IBOutlet weak var checkoutButton: UIButton!
-    
+
     var session: Session!
 
     override func viewDidLoad() {
@@ -26,7 +26,13 @@ class PreviewViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        freeShippingLabel.text = "Order in \(session.minutesLeftForFreeShipping) minues to get a free shipping."
+
+        let minutesLeftForFreeShipping = session.minutesLeftForFreeShipping
+        if minutesLeftForFreeShipping == 0 {
+            freeShippingLabel.text = nil
+        } else {
+            freeShippingLabel.text = "Order in \(session.minutesLeftForFreeShipping) minutes to get free shipping."
+        }
         updateOrderInformation()
     }
 
@@ -57,6 +63,9 @@ extension PreviewViewController: UITableViewDataSource {
 
 extension PreviewViewController: CounterProtocol {
     func update(with count: Int, cell: CheckoutCell) {
+        session.reportEvent("Checkout item updated", with: ["item": cell.checkoutItem.product.id,
+                                                            "count": cell.checkoutItem.count])
+
         if let indexPath = tableView.indexPath(for: cell) {
             let index = indexPath.row
             if count == 0 {

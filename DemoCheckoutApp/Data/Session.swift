@@ -22,4 +22,7 @@ class Session {
         let minutesLeft = freeOrderTimeLimit - Int(minutesPassed)
         return minutesLeft < 0 ? 0 : minutesLeft
     }
+
+    func reportEvent(_ name: String, with properties: [String: Any] = [:]) {
+    }
 }

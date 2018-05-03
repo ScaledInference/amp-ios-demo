@@ -16,7 +16,7 @@ class CheckoutCell: UITableViewCell {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var stepper: UIStepper?
 
-    var delegate: CounterProtocol?
+    weak var delegate: CounterProtocol?
 
     var checkoutItem: CheckoutItem! {
         didSet {
@@ -35,6 +35,6 @@ class CheckoutCell: UITableViewCell {
     }
 }
 
-protocol CounterProtocol {
+protocol CounterProtocol: class {
     func update(with count: Int, cell: CheckoutCell)
 }

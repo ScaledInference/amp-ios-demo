@@ -16,7 +16,7 @@ struct Category: Codable {
 struct Product: Codable {
     let id:                 String
     let name:               String
-    let description:        String
+    let details:            String
     let price:              Float
 }
 
@@ -27,64 +27,5 @@ extension Product: Hashable {
 
     public static func == (lhs: Product, rhs: Product) -> Bool {
         return lhs.id == rhs.id
-    }
-}
-
-struct CheckoutItem {
-    let product: Product
-    var count = 0
-}
-
-class Order {
-    var checkoutItems = [CheckoutItem]()
-    var discount: Int = 5
-
-    var totalCount: Int {
-        var totalCount = 0
-        for item in checkoutItems {
-            totalCount += item.count
-        }
-        return totalCount
-    }
-
-    var subTotalCost: Float {
-        var totalCost = Float(0)
-        for item in checkoutItems {
-            totalCost += item.product.price * Float(item.count)
-        }
-        return totalCost
-    }
-
-    var totalCost: Float {
-        return subTotalCost * Float(100 - discount) / 100
-    }
-
-    var discountAmount: Float {
-        return subTotalCost * Float(discount) / 100
-    }
-
-    func contains(_ product: Product) -> Bool {
-        return index(of: product) != nil
-    }
-
-    func add(_ product: Product) {
-        if let index = index(of: product) {
-            checkoutItems[index].count += 1
-        } else {
-            checkoutItems.append(CheckoutItem(product: product, count: 1))
-        }
-    }
-
-    func index(of product: Product) -> Int? {
-        return checkoutItems.index(where: { addedProduct -> Bool in
-            return addedProduct.product.id == product.id
-        })
-    }
-
-    func addedCount(_ product: Product) -> Int? {
-        if let index = index(of: product) {
-            return checkoutItems[index].count
-        }
-        return nil
     }
 }

@@ -509,6 +509,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="placeOrder:" destination="ddM-a6-cA0" eventType="touchUpInside" id="140-na-7bZ"/>
                                                     <segue destination="J3A-O9-5cx" kind="presentation" id="udk-8B-UO5"/>
                                                 </connections>
                                             </button>

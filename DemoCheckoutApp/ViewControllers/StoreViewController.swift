@@ -71,6 +71,8 @@ extension StoreViewController: CartProtocol {
             let product = dataProvider.categories[indexPath.section].products[indexPath.row]
             session.order.add(product)
 
+            session.reportEvent("Product added", with: ["id": product.id])
+
             updateOrderInformation()
             UIView.animate(withDuration: 0.5) {
                 сell.addedCount = self.session.order.addedCount(product)

@@ -22,7 +22,7 @@ class CheckoutViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var deliveryDateLabel: UILabel!
     @IBOutlet weak var placeOrderButton: UIButton!
-    
+
     var session: Session!
 
     override func viewDidLoad() {
@@ -42,6 +42,11 @@ class CheckoutViewController: UIViewController {
         discountLabel.text = "\(session.order.discountAmount)"
         totalLabel.text = "\(session.order.totalCost)"
         deliveryDateLabel.text = CheckoutViewController.dateFormatter.string(from: Date())
+    }
+
+    @IBAction func placeOrder(_ sender: Any) {
+        session.reportEvent("Checkout event", with: ["totalCost": session.order.totalCost,
+                                                     "count": session.order.totalCount])
     }
 }
 
