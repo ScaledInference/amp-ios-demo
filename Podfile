@@ -6,5 +6,6 @@ target 'DemoCheckoutApp' do
   use_frameworks!
 
   # Pods for DemoCheckoutApp
+  pod 'AmpiOS', '~> 1.0'
 
 end

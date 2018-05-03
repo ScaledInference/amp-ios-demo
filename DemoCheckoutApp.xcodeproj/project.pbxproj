@@ -370,9 +370,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DemoCheckoutApp/Pods-DemoCheckoutApp-frameworks.sh",
+				"${PODS_ROOT}/AmpiOS/AmpiOS.framework",
+				"${PODS_ROOT}/AmpiOS/AmpiOS.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AmpiOS.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/AmpiOS.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
