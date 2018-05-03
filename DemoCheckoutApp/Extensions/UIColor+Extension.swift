@@ -9,5 +9,5 @@
 import UIKit
 
 extension UIColor {
-    static let greenCTAColor = UIColor(red: 0, green: 144/255.0, blue: 81/255.0, alpha: 1)
+    static let greenCtaColor = UIColor(red: 0, green: 144/255.0, blue: 81/255.0, alpha: 1)
 }

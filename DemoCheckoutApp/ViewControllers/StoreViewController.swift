@@ -10,7 +10,7 @@ import UIKit
 
 class StoreViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var couterButton: UIButton!
+    @IBOutlet weak var counterButton: UIButton!
 
     let dataProvider: DataProvider = DataProvider.shared
     let session: Session = Session()
@@ -61,7 +61,7 @@ extension StoreViewController: UITableViewDataSource {
     }
 
     func updateOrderInformation() {
-        couterButton.titleLabel?.text = "\(session.order.totalCount)"
+        counterButton.titleLabel?.text = "\(session.order.totalCount)"
     }
 }
 

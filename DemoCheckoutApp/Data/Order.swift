@@ -10,6 +10,7 @@ import Foundation
 
 class Order {
     var checkoutItems = [CheckoutItem]()
+    /// Discount value in percents
     var discount: Int = 5
 
     var totalCount: Int {
@@ -20,7 +21,7 @@ class Order {
         return totalCount
     }
 
-    var subTotalCost: Float {
+    var subtotalCost: Float {
         var totalCost = Float(0)
         for item in checkoutItems {
             totalCost += item.product.price * Float(item.count)
@@ -29,11 +30,11 @@ class Order {
     }
 
     var totalCost: Float {
-        return subTotalCost * Float(100 - discount) / 100
+        return subtotalCost * Float(100 - discount) / 100
     }
 
     var discountAmount: Float {
-        return subTotalCost * Float(discount) / 100
+        return subtotalCost * Float(discount) / 100
     }
 
     func contains(_ product: Product) -> Bool {

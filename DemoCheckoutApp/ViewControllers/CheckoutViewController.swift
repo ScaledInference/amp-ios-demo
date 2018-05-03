@@ -38,7 +38,7 @@ class CheckoutViewController: UIViewController {
     }
 
     func updateOrderInformation() {
-        subtotalLabel.text = "\(session.order.subTotalCost)"
+        subtotalLabel.text = "\(session.order.subtotalCost)"
         discountLabel.text = "\(session.order.discountAmount)"
         totalLabel.text = "\(session.order.totalCost)"
         deliveryDateLabel.text = CheckoutViewController.dateFormatter.string(from: Date())

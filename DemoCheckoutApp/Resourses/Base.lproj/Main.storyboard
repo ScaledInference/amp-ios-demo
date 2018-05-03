@@ -144,7 +144,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="couterButton" destination="XWi-qg-YGI" id="ftv-eA-FSq"/>
+                        <outlet property="counterButton" destination="XWi-qg-YGI" id="ftv-eA-FSq"/>
                         <outlet property="tableView" destination="CYy-Ne-IKP" id="moS-VQ-2Ii"/>
                     </connections>
                 </viewController>
@@ -330,9 +330,9 @@
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="countLabel" destination="PII-rR-DuO" id="9vg-vL-Ksf"/>
+                                            <outlet property="countStepper" destination="486-j4-3Rl" id="rnS-R1-9aG"/>
                                             <outlet property="pictureImageView" destination="omb-FN-REh" id="Jnd-pF-5D3"/>
                                             <outlet property="priceLabel" destination="wjq-kx-8Dd" id="okO-6T-ll7"/>
-                                            <outlet property="stepper" destination="486-j4-3Rl" id="rnS-R1-9aG"/>
                                             <outlet property="titleLabel" destination="3BR-HY-zFn" id="fcD-Lf-Fno"/>
                                         </connections>
                                     </tableViewCell>

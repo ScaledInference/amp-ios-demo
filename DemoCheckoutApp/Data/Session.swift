@@ -12,14 +12,14 @@ import UIKit
 class Session {
     let order = Order()
     let startDate = Date()
-    /// Call To Action button color
-    var ctaColor = UIColor.greenCTAColor
-    /// Value is in minutes
-    var freeOrderTimeLimit = 30
+    /// "Call to action" button color
+    var ctaColor = UIColor.greenCtaColor
+    /// Time given to place an order to get free shipping in minutes
+    var freeShippingTimeLimit = 30
 
     var minutesLeftForFreeShipping: Int {
         let minutesPassed = Date().timeIntervalSince(startDate) / TimeInterval(60)
-        let minutesLeft = freeOrderTimeLimit - Int(minutesPassed)
+        let minutesLeft = freeShippingTimeLimit - Int(minutesPassed)
         return minutesLeft < 0 ? 0 : minutesLeft
     }
 

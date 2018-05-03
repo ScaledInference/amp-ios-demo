@@ -14,7 +14,7 @@ class CheckoutCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var stepper: UIStepper?
+    @IBOutlet weak var countStepper: UIStepper?
 
     weak var delegate: CounterProtocol?
 
@@ -24,7 +24,7 @@ class CheckoutCell: UITableViewCell {
             titleLabel.text = checkoutItem.product.name
             priceLabel.text = String(format: "%.02f", checkoutItem.product.price)
             countLabel.text = "\(checkoutItem.count)"
-            stepper?.value = Double(checkoutItem.count)
+            countStepper?.value = Double(checkoutItem.count)
         }
     }
 

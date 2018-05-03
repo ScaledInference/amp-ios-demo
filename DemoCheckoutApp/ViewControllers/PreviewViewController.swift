@@ -37,7 +37,7 @@ class PreviewViewController: UIViewController {
     }
 
     func updateOrderInformation() {
-        subtotalLabel.text = "\(session.order.subTotalCost)"
+        subtotalLabel.text = "\(session.order.subtotalCost)"
         countLabel.text = "\(session.order.totalCount)"
     }
 
@@ -64,7 +64,7 @@ extension PreviewViewController: UITableViewDataSource {
 extension PreviewViewController: CounterProtocol {
     func update(with count: Int, cell: CheckoutCell) {
         session.reportEvent("Checkout item updated", with: ["item": cell.checkoutItem.product.id,
-                                                            "count": cell.checkoutItem.count])
+                                                            "count": count])
 
         if let indexPath = tableView.indexPath(for: cell) {
             let index = indexPath.row
