@@ -13,7 +13,7 @@ class Session {
     let order = Order()
     let startDate = Date()
     /// Call To Action button color
-    var ctaColor = UIColor.orangeCTAColor
+    var ctaColor = UIColor.greenCTAColor
     /// Value is in minutes
     var freeOrderTimeLimit = 30
 
