@@ -11,7 +11,8 @@ import UIKit
 import AmpiOS
 
 class Session {
-    static let amp = Amp(key: "94f9dd5f9bb946a1")
+    static let key = "94f9dd5f9bb946a1"
+    static let amp = Amp(key: Session.key)
     static let colorKey = "color"
     static let freeShippingTimeKey = "free_shipping_time"
 
@@ -29,7 +30,7 @@ class Session {
         let candidates = [
             Session.colorKey: [CtaColor.green.rawValue, CtaColor.orange.rawValue, CtaColor.red.rawValue],
             Session.freeShippingTimeKey: [0, 30, 60, 120]]
-        let decision = Session.amp.decide(name: "candiates", candidates: candidates)
+        let decision = Session.amp.decide(name: "AmpedCart", candidates: candidates)
         ctaColor = CtaColor(rawValue: decision[Session.colorKey] as! String)!.color
         freeShippingTimeLimit = decision[Session.freeShippingTimeKey] as! Int
     }
