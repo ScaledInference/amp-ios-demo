@@ -53,6 +53,7 @@
 		7386622620998CFF00D00AC2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738661F420998CFF00D00AC2 /* UIColor+Extension.swift */; };
 		7386622720998CFF00D00AC2 /* CheckoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738661F620998CFF00D00AC2 /* CheckoutCell.swift */; };
 		7386622820998CFF00D00AC2 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738661F720998CFF00D00AC2 /* ProductCell.swift */; };
+		738C057220D1B3640016D4A6 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738C057120D1B3640016D4A6 /* Customer.swift */; };
 		73EA2E98209991D000A8D94C /* avocado.png in Resources */ = {isa = PBXBuildFile; fileRef = 73EA2E97209991D000A8D94C /* avocado.png */; };
 		EB268DF8D8BD621766998563 /* Pods_DemoCheckoutApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ACAF51266BBCCECCCEF0CE2 /* Pods_DemoCheckoutApp.framework */; };
 /* End PBXBuildFile section */
@@ -108,6 +109,7 @@
 		738661F420998CFF00D00AC2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		738661F620998CFF00D00AC2 /* CheckoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutCell.swift; sourceTree = "<group>"; };
 		738661F720998CFF00D00AC2 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		738C057120D1B3640016D4A6 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		73EA2E97209991D000A8D94C /* avocado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avocado.png; sourceTree = "<group>"; };
 		D71774D4B6F4FB032950F24A /* Pods-DemoCheckoutApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoCheckoutApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoCheckoutApp/Pods-DemoCheckoutApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -232,6 +234,7 @@
 				730DCC77209A995900030326 /* Order.swift */,
 				738661F020998CFF00D00AC2 /* DataProvider.swift */,
 				730DCC75209A7C2400030326 /* Session.swift */,
+				738C057120D1B3640016D4A6 /* Customer.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				730DCC78209A995900030326 /* Order.swift in Sources */,
 				7386622520998CFF00D00AC2 /* Product.swift in Sources */,
 				7386622820998CFF00D00AC2 /* ProductCell.swift in Sources */,
+				738C057220D1B3640016D4A6 /* Customer.swift in Sources */,
 				7386622720998CFF00D00AC2 /* CheckoutCell.swift in Sources */,
 				730DCC76209A7C2400030326 /* Session.swift in Sources */,
 				7386622620998CFF00D00AC2 /* UIColor+Extension.swift in Sources */,
