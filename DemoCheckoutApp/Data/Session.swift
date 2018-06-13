@@ -27,6 +27,10 @@ class Session {
     init() {
         _  = Session.amp.session(userId: "some_user_id")
 
+        // Context before decide
+        let customer = Customer()
+        Session.amp.observe(name: "CustomerContext", properties: customer.info())
+
         let candidates = [
             Session.colorKey: [CtaColor.green.rawValue, CtaColor.orange.rawValue, CtaColor.red.rawValue],
             Session.freeShippingTimeKey: [0, 30, 60, 120]]
