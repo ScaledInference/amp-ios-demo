@@ -1,3 +1,17 @@
-PODFILE CHECKSUM: e7f38a97e5184bcb0d8a959958ec0c2b1ff1b9dd
+PODS:
+  - AmpiOS (1.0.11):
+    - SQLite.swift (~> 0.11.5)
+  - SQLite.swift (0.11.5):
+    - SQLite.swift/standard (= 0.11.5)
+  - SQLite.swift/standard (0.11.5)
+
+DEPENDENCIES:
+  - AmpiOS (~> 1.0)
+
+SPEC CHECKSUMS:
+  AmpiOS: ecad1d3e35732cc13cbc37ccfa89f7ec9ceb3215
+  SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
+
+PODFILE CHECKSUM: 253bce3c4088850375510a2b60fd4795b34aae3c
 
 COCOAPODS: 1.4.0
